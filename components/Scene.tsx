@@ -2,23 +2,21 @@ import {
 	ContactShadows,
 	Environment,
 	MeshDistortMaterial,
-	OrbitControls,
 } from "@react-three/drei";
 import { Suspense } from "react";
 
 export default function Scene() {
 	return (
 		<>
-			<OrbitControls />
-			{/* <mesh>
-				<boxGeometry />
-				<meshBasicMaterial color={"teal"} />
-			</mesh> */}
-
 			<Suspense fallback={null}>
-				<mesh>
+				<mesh position={[-2, 0, 0]} scale={1.5}>
 					<sphereGeometry args={[1, 64, 64]} />
-					<MeshDistortMaterial clearcoatRoughness={0} metalness={0.1} />
+					<MeshDistortMaterial
+						clearcoatRoughness={0.1}
+						metalness={0.1}
+						distort={0.7}
+						speed={1}
+					/>
 				</mesh>
 				<Environment preset="warehouse" />
 				<ContactShadows
