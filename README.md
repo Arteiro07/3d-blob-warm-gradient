@@ -4,5 +4,7 @@ and a rotating frame image.
 - [x] Setup the 3d environment
 - [x] Setup the blob
 - [x] Warm gradient
+- [ ] Blob animations
+- [ ] Scroll animations
 - [ ] Rotating frame
 - [ ] Lighting and miscellaneous
